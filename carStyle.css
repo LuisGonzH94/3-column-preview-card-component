@@ -1,0 +1,153 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box,
+  ;
+}
+/* setting up the color for each article(vehicles) */
+:root {
+  --sedans-color: hsl(31, 77%, 52%);
+  --suv-color: hsl(184, 100%, 22%);
+  --luxury-color: hsl(179, 100%, 13%);
+  --text-color: hsla(0, 0%, 100%, 0.75);
+  --body-text-btn-color: hsl(0, 0%, 95%);
+  --text-font-fam: "Lexend Deca";
+  --head-font-fam: "Big Shoulders Display";
+}
+/* We will start off designing this web from a mobile screen size. PC screen size adjusted at the botton with @media */
+body {
+  background: var(--body-head-btn-color);
+  font-family: var(--text-font-fam), sans-serif;
+  font-weight: 400;
+  height: 100vh; 
+}
+
+main {
+  margin-top: 5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+/* The entire box container */
+.container {
+  max-width: 20.5 rem;
+}
+/* Sedan container column */
+.column-sedans {
+  background-color: var(--sedans-color);
+  border-top-left-radius: .625rem;
+  border-top-right-radius: .625rem;
+}
+/* SUV container column */
+.column-suvs {
+  background-color: var(--suv-color);
+}
+/* Luxury container column */
+.column-luxury {
+  background-color: var(--luxury-color);
+  border-bottom-left-radius: .625rem;
+  border-bottom-right-radius: .625rem;
+}
+/* Inside column container for each vehicle */
+.column-container {
+  display: flex;
+  flex-direction: column;
+  padding: 3.125rem;
+}
+
+.car-icon {
+  width: 4rem;
+  height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-family: var(--head-font-fam), sans-serif;
+  font-size: 2.5rem;
+  color: var(--body-text-btn-color);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem
+}
+
+.para-desc {
+  font-size: 0.95rem;
+  color: var(--body-text-btn-color);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: var(--body-text-btn-color);
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.95rem;
+  padding: .68rem 1.9rem;
+  border-radius: 22px;
+}
+/* Adjusting the font color for the each vehicle button */
+.btn-sedans {
+  color: var(--sedans-color);
+}
+
+.btn-suvs {
+  color: var(--suv-color);
+}
+
+.btn-luxury {
+  color: var(--luxury-color);
+}
+
+.btn:hover {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+footer {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer div {
+  width: 65%;
+  font-size: .875rem;
+  text-align: center;
+}
+
+/* Adjust to 1024px screen size */
+@media screen and (min-width: 64rem) {
+  main {
+    margin-top: 9rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 90%;
+  }
+  .column-sedans {
+    border-radius: .625rem 0 0 .625rem;
+    /* border-top-right-radius: .625rem; */
+  }
+  .column-luxury {
+    border-radius: 0 .625rem .625rem 0;
+  }
+}
+
+/* Adjust to max-width: 1440px and min-width: 1344px screen size */
+@media screen and (max-width: 90rem) and (min-width: 84rem) {
+  main {
+    width: 70%;
+    margin: 10rem 12.5rem 0rem 12.5rem;
+  }
+  .column-sedans {
+    border-radius: .625rem 0 0 .625rem;
+  }
+  .column-luxury {
+    border-radius: 0 .625rem .625rem 0;
+  }
+}
