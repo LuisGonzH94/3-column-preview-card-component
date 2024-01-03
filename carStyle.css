@@ -21,7 +21,8 @@ body {
   background: var(--body-head-btn-color);
   font-family: var(--text-font-fam), sans-serif;
   font-weight: 400;
-  height: 100vh; 
+  height: 100vh;
+  background-color: #F2F2F2;
 }
 
 main {
@@ -102,8 +103,8 @@ main {
 
 .btn:hover {
   background: none;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #ffffff;
+  color: #ffffff;
   cursor: pointer;
 }
 
